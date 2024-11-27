@@ -15,6 +15,7 @@ const podcasts = [
   { youtubeUrl: "https://youtu.be/52YgALPo_SU?si=8NiQR8WVUODipeFl" },
   { youtubeUrl: "https://youtu.be/eooT59cETcw?si=TXctIs0sYvSA_B7g" },
   { youtubeUrl: "https://youtu.be/K8_1z7BwiJc?si=N1vsbwApRXqRa1kz" },
+  { youtubeUrl: "https://youtu.be/caBvuoYEcFQ?si=hqjr4rnQWy4Tu1hC" },
 ];
 
 export default function Home() {

@@ -56,7 +56,7 @@ export default function Contact() {
           <div className="flex flex-wrap -mx-4">
             {/* Contact Form */}
             <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-              <div className="bg-white p-8 shadow-md rounded-lg">
+              <div className="bg-white text-black p-8 shadow-md rounded-lg">
                 <h2 className="text-3xl font-semibold mb-6 text-center text-gray-800">
                   Contact Us
                 </h2>
@@ -130,8 +130,8 @@ export default function Contact() {
                     </svg>
                     <div>
                       <h3 className="font-semibold text-lg">Email Us</h3>
-                      <a href="mailto:business@example.com" className="text-gray-600 hover:underline">
-                      Sarveshshow@gmail.com
+                      <a href="mailto:sarveshshow@gmail.com" className="text-gray-600 hover:underline">
+                        sarveshshow@gmail.com
                       </a>
                     </div>
                   </div>
@@ -151,32 +151,14 @@ export default function Contact() {
                     </svg>
                     <div>
                       <h3 className="font-semibold text-lg">Visit Us</h3>
-                      <p className="text-gray-600">Office no. 3, G69, G Block, Sector 63, Chotpur, Noida, Uttar Pradesh 201301</p>
+                      <p className="text-gray-600">
+                        Office no. 3, G69, G Block, Sector 63, Chotpur, Noida, Uttar Pradesh 201301
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      {/* Map Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold mb-6 text-center text-gray-800">
-            Our Location
-          </h2>
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.4437989076!2d77.37916307536395!3d28.618891975685837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Sector%2063%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1698087280276!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Our Office Location in Noida, Sector 63"
-            ></iframe>
           </div>
         </div>
       </section>
