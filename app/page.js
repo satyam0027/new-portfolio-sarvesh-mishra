@@ -74,7 +74,7 @@ export default function Home() {
         <div className="container mx-auto text-center px-4">
           <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-gray-700">
             <Image
-              src="/FKYX5745.jpg"
+              src="https://res.cloudinary.com/dtflxn49g/image/upload/v1731915678/kxboglgcvyrsfunbhsks.jpg"
               alt="Sarvesh Mishra"
               fill
               className="object-cover"
