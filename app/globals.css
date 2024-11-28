@@ -16,9 +16,13 @@
 
 
 /* Add these styles for smooth transitions */
-body , .bg-white, .bg-gray-900, .text-black, .text-white {
+body {
+  background-color: black !important;
+  color: white !important;
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 body {
   font-family: 'Inter', sans-serif;
@@ -33,6 +37,7 @@ body {
 
 body {
   font-family: var(--font-outfit);
+  
 }
 @layer utilities{
   .no-scrollbar::-webkit-scrollbar{
@@ -67,5 +72,4 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
-
 
