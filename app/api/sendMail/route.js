@@ -20,7 +20,8 @@ export async function POST(req) {
       {
         text: message,
         from: name,
-        to: email,
+        email: email,
+        to: process.env.EMAIL_USER,
       },
       (err, message) => {
         console.log(err || message);
