@@ -80,7 +80,7 @@ export default function Home() {
               className="object-cover"
             />
           </div>
-          <h1 className="text-5xl font-bold mt-4 text-yellow-400">
+          <h1 className="text-5xl font-bold mt-4 text-yellow-400 max-sm:text-3xl">
             Sarvesh Mishra
           </h1>
           <p className="text-xl font-light mt-2">
