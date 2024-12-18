@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* About Sarvesh Mishra Section */}
-      <section className="py-16">
+      <section className="py-16 max-sm:py-6">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
           {/* Image Section */}
           <div className="flex-shrink-0 w-full md:w-1/2">
@@ -111,10 +111,10 @@ export default function Home() {
 
           {/* Text Content Section */}
           <div className="w-full md:w-1/2 text-white">
-            <h2 className="max-sm:text-3xl text-4xl font-bold text-gray-100 mb-4">
-              About <span className="max-sm:text-3xl text-yellow-500">Sarvesh Mishra</span>
+            <h2 className="max-sm:text-2xl text-4xl font-bold text-gray-100 mb-4">
+              About <span className="max-sm:text-2xl text-yellow-500">Sarvesh Mishra</span>
             </h2>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="max-sm:text-md text-lg mb-6 text-justify leading-relaxed">
               Sarvesh Mishra is a dynamic self-branding coach, holistic wellness
               advocate, and marketing clarity expert. A media consultant,
               journalist, and author, Sarvesh has dedicated over 15 years to
