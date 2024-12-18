@@ -17,12 +17,26 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',   // Gmail SMTP host
       port: 465,                // Secure SSL port for Gmail
-      secure: true,             // Use SSL
       auth: {
         user: process.env.EMAIL_USER, // Your Gmail email
         pass: process.env.EMAIL_PASSWORD, // Gmail app password (not your regular Gmail password)
       },
+      secure: true             // Use SSL
     });
+
+    await new Promise((resolve, reject) => {
+      transporter.verify((error, success) => {
+        if(error){
+          console.log(error + " sending the mail");
+          reject(error);
+        }
+        else{
+          console.log("Server is ready to take the message...");
+          resolve(success);
+        }
+      });
+    });
+
 
     // Email content
     const mailOptions = {
@@ -36,10 +50,22 @@ export async function POST(req) {
       `,
     };
 
-    // Send email using the transporter
-    const info = await transporter.sendMail(mailOptions);
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, (error, info) => {
+        if(error){
+          console.log(error);
+          reject(error);
+        }else{
+          console.log("Email sent: ", info);
+          resolve(info);
+        }
+      });
+    });
 
-    console.log("Email sent: ", info);
+    // Send email using the transporter
+    // const info = await transporter.sendMail(mailOptions);
+
+    // console.log("Email sent: ", info);
 
     // Respond with success
     return new Response(
