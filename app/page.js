@@ -114,7 +114,7 @@ export default function Home() {
             <h2 className="max-sm:text-2xl text-4xl font-bold text-gray-100 mb-4">
               About <span className="max-sm:text-2xl text-yellow-500">Sarvesh Mishra</span>
             </h2>
-            <p className="max-sm:text-md text-lg mb-6 text-justify leading-relaxed">
+            <p className="max-sm:text-md text-lg mb-6 leading-relaxed">
               Sarvesh Mishra is a dynamic self-branding coach, holistic wellness
               advocate, and marketing clarity expert. A media consultant,
               journalist, and author, Sarvesh has dedicated over 15 years to
