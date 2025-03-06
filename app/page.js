@@ -83,11 +83,12 @@ export default function Home() {
           <h1 className="text-5xl font-bold mt-4 text-yellow-400 max-sm:text-3xl">
             Sarvesh Mishra
           </h1>
-          <p className="text-xl font-light mt-2">
-            Take your first step towards
-          </p>
+         
           <p className="text-2xl font-bold text-yellow-500 block mt-4">
-            Self-growth | Media mastery | Unleashing your potential
+            PR & Media Consultant
+          </p>
+          <p className="text-xl mt-2 font-bold">
+          "From No Name to Fame" – A journey of passion, creativity, and relentless storytelling.
           </p>
         </div>
       </section>

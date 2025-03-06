@@ -25,53 +25,36 @@ export default function About() {
         </p>
       </div>
 
-      {/* Self-Branding Section */}
+      {/* PR Section */}
       <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
         <div className="md:w-1/2">
-          <h3 className="text-2xl font-bold mb-4 text-yellow-500">Self-Branding</h3>
+          <h3 className="text-2xl font-bold mb-4 text-yellow-500">Public Relations</h3>
           <p className="text-white leading-relaxed">
-            Your personal brand is your story, and I’m here to help you tell it with authenticity and impact. I work with clients to discover their unique value proposition, build confidence in their personal narrative, and create an identity that resonates with their audience. Whether you're an entrepreneur, professional, or creator, together we’ll craft a personal brand that aligns with your goals and reflects your authentic self.
+            Effective communication is key to building a strong reputation. With expertise in public relations, I help individuals and businesses craft compelling narratives, manage their public image, and develop strategies that enhance brand credibility. From media outreach to crisis communication, I provide guidance to ensure your story is heard in the right way.
           </p>
         </div>
         <div className="md:w-1/2">
           <img
-            src="/pexels-eva-bronzini-6957219.jpg" // Replace with your branding-related image
-            alt="Self-Branding"
-            className="rounded-lg shadow-lg mx-auto"
+            src="/5806789.jpg" // Replace with your PR-related image
+            alt="Public Relations"
+            className="w-full h-[300px] object-cover rounded-lg shadow-lg mx-auto"
           />
         </div>
       </div>
 
-      {/* Holistic Wellness Section */}
+      {/* Media Consultant Section */}
       <div className="flex flex-col md:flex-row-reverse items-center gap-12 mb-16">
         <div className="md:w-1/2">
-          <h3 className="text-2xl font-bold mb-4 text-yellow-500">Holistic Wellness Coaching</h3>
+          <h3 className="text-2xl font-bold mb-4 text-yellow-500">Media Consultant</h3>
           <p className="text-white leading-relaxed">
-            True success begins with a healthy mind and body. My holistic wellness coaching integrates mindfulness, physical health, and emotional resilience to help you achieve balance and well-being. I guide clients to develop habits and strategies that support a harmonious lifestyle, enabling them to perform at their best and live with purpose. Together, we address not just goals, but the journey to achieving them with vitality and joy.
+            Navigating the ever-evolving media landscape can be challenging. As a media consultant, I work with clients to develop media strategies that maximize their reach and impact. Whether it’s content creation, digital marketing, or media training, I provide insights and expertise to help you stand out in a competitive industry.
           </p>
         </div>
         <div className="md:w-1/2">
           <img
-            src="/pexels-bakr-magrabi-928159-3203659.jpg" // Replace with your wellness-related image
-            alt="Holistic Wellness"
-            className="rounded-lg shadow-lg mx-auto"
-          />
-        </div>
-      </div>
-
-      {/* Marketing Clarity Section */}
-      <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
-        <div className="md:w-1/2">
-          <h3 className="text-2xl font-bold mb-4 text-yellow-500">Marketing Clarity Coaching</h3>
-          <p className="text-white leading-relaxed">
-            In a crowded marketplace, clarity is your competitive edge. I help individuals and businesses demystify marketing strategies, align their messaging with their target audience, and create campaigns that drive results. From developing content strategies to refining your communication style, I provide actionable guidance to position your brand for long-term success. Let’s cut through the noise and bring your vision to life with a clear and compelling approach.
-          </p>
-        </div>
-        <div className="md:w-1/2">
-          <img
-            src="/pexels-eva-bronzini-7661185.jpg" // Replace with your marketing-related image
-            alt="Marketing Clarity"
-            className="rounded-lg shadow-lg mx-auto"
+            src="/4846426.jpg" // Replace with your media-related image
+            alt="Media Consultant"
+            className="w-full h-[300px] object-cover rounded-lg shadow-lg mx-auto"
           />
         </div>
       </div>
