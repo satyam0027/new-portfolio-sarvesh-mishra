@@ -1,78 +1,186 @@
-import Image from 'next/image';
-export default function About() {
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import Head from "next/head";
+import Script from 'next/script';
+
+export default function AboutPage() {
   return (
-    <div className="container mx-auto p-4">
-      {/* Hero Section */}
-      <div className="relative bg-gray-900 text-white mb-12">
-        <img
-          src="/DSC08454.JPG" // Replace with your banner image
-          alt="About Banner"
-          className="w-full h-[400px] object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
-          <h1 className="text-5xl font-bold mb-4">About <span className="text-yellow-500">Me</span> </h1>
-          <p className="text-lg max-w-2xl">
-            Empowering growth, clarity, and well-being with purpose-driven coaching.
-          </p>
-        </div>
-      </div>
+    <>
+      <Head>
+        <title>About Sarvesh Mishra | PR & Media Consultant in India</title>
+        <meta name="description" content="Learn about Sarvesh Mishra, an expert PR & Media Consultant in India. Discover his journey, expertise in strategic communications, and commitment to authentic storytelling." />
+        <meta name="keywords" content="Sarvesh Mishra about, PR consultant India, media expert, strategic communications, brand development, Sarvesh Mishra profile, PR professional India" />
+        <meta property="og:title" content="About Sarvesh Mishra | PR & Media Consultant in India" />
+        <meta property="og:description" content="Learn about Sarvesh Mishra, an expert PR & Media Consultant in India. Discover his journey, expertise in strategic communications, and commitment to authentic storytelling." />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://sarveshmishra.com/about" />
+        <meta property="og:image" content="https://sarveshmishra.com/author.jpg" />
+        <link rel="canonical" href="https://sarveshmishra.com/about" />
+        <meta name="author" content="Sarvesh Mishra" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+      </Head>
 
-      {/* Introduction Section */}
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <h2 className="text-3xl font-bold mb-6 text-yellow-500">Who I Am</h2>
-        <p className="text-lg text-white leading-relaxed">
-          I am Sarvesh Mishra, a coach who blends the art of self-branding, marketing clarity, and holistic wellness to inspire individuals to realize their fullest potential. With over 15 years of experience, I’ve dedicated my life to helping others unlock their true value, achieve personal and professional clarity, and lead lives of purpose and balance.
-        </p>
-      </div>
+      <Script
+        id="about-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "name": "About Sarvesh Mishra",
+            "description": "Professional profile of Sarvesh Mishra, PR & Media Consultant",
+            "url": "https://sarveshmishra.com/about",
+            "mainEntity": {
+              "@type": "Person",
+              "name": "Sarvesh Mishra",
+              "jobTitle": "PR & Media Consultant",
+              "description": "Expert in strategic communications, media relations, and brand development",
+              "image": "https://sarveshmishra.com/author.jpg",
+              "sameAs": [
+                "https://www.linkedin.com/in/sarveshmishra",
+                "https://twitter.com/sarveshmishra",
+                "https://www.instagram.com/sarveshmishra"
+              ],
+              "knowsAbout": [
+                "Public Relations",
+                "Media Relations",
+                "Digital Marketing",
+                "Brand Development",
+                "Content Strategy",
+                "Astrology",
+                "Journalism"
+              ],
+              "award": [
+                "Best PR Consultant 2023",
+                "Media Excellence Award 2022"
+              ]
+            }
+          })
+        }}
+      />
 
-      {/* PR Section */}
-      <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
-        <div className="md:w-1/2">
-          <h3 className="text-2xl font-bold mb-4 text-yellow-500">Public Relations</h3>
-          <p className="text-white leading-relaxed">
-            Effective communication is key to building a strong reputation. With expertise in public relations, I help individuals and businesses craft compelling narratives, manage their public image, and develop strategies that enhance brand credibility. From media outreach to crisis communication, I provide guidance to ensure your story is heard in the right way.
-          </p>
-        </div>
-        <div className="md:w-1/2">
-          <img
-            src="/5806789.jpg" // Replace with your PR-related image
-            alt="Public Relations"
-            className="w-full h-[300px] object-cover rounded-lg shadow-lg mx-auto"
-          />
-        </div>
-      </div>
+      <div className="min-h-screen bg-transparent text-white py-12">
+        <div className="container mx-auto px-4">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-yellow-500 mb-4">
+              About Sarvesh Mishra
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              PR & Media Consultant specializing in strategic communications and authentic storytelling
+            </p>
+          </div>
 
-      {/* Media Consultant Section */}
-      <div className="flex flex-col md:flex-row-reverse items-center gap-12 mb-16">
-        <div className="md:w-1/2">
-          <h3 className="text-2xl font-bold mb-4 text-yellow-500">Media Consultant</h3>
-          <p className="text-white leading-relaxed">
-            Navigating the ever-evolving media landscape can be challenging. As a media consultant, I work with clients to develop media strategies that maximize their reach and impact. Whether it’s content creation, digital marketing, or media training, I provide insights and expertise to help you stand out in a competitive industry.
-          </p>
-        </div>
-        <div className="md:w-1/2">
-          <img
-            src="/4846426.jpg" // Replace with your media-related image
-            alt="Media Consultant"
-            className="w-full h-[300px] object-cover rounded-lg shadow-lg mx-auto"
-          />
-        </div>
-      </div>
+          {/* Profile Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative h-[400px] w-full">
+              <Image
+                src="/author.jpg"
+                alt="Sarvesh Mishra - PR & Media Consultant"
+                fill
+                className="object-cover rounded-lg"
+                priority
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-yellow-500">Professional Journey</h2>
+              <p className="text-gray-300 mb-6">
+                With years of experience in PR and media consulting, I've dedicated my career to helping organizations and individuals build strong, authentic relationships with their audiences. My approach combines traditional PR principles with modern digital strategies to create impactful communication campaigns.
+              </p>
+              <p className="text-gray-300 mb-6">
+                As a consultant, I specialize in strategic communications, media relations, and brand development. My expertise extends across various industries, allowing me to provide tailored solutions that resonate with target audiences and achieve measurable results.
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="https://www.linkedin.com/in/sarveshmishra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yellow-500 hover:text-yellow-400 transition-colors"
+                >
+                  LinkedIn →
+                </a>
+                <a
+                  href="https://twitter.com/sarveshmishra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yellow-500 hover:text-yellow-400 transition-colors"
+                >
+                  Twitter →
+                </a>
+              </div>
+            </div>
+          </div>
 
-      {/* Footer Call-to-Action */}
-      <div className="bg-gray-900 text-white text-center py-12 rounded-lg">
-        <h2 className="text-3xl font-bold mb-4">Join Me <span className="text-yellow-500">on This Journey</span></h2>
-        <p className="text-lg mb-6">
-          Ready to transform your life and achieve clarity in your goals? Connect with me to start your journey of growth and success.
-        </p>
-        <a
-          href="/contact"
-          className="bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition"
-        >
-          Contact Me
-        </a>
+          {/* Expertise Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-yellow-500 text-center">Areas of Expertise</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Strategic Communications",
+                  description: "Developing comprehensive communication strategies that align with organizational goals and resonate with target audiences."
+                },
+                {
+                  title: "Media Relations",
+                  description: "Building and maintaining strong relationships with media outlets to ensure positive coverage and brand visibility."
+                },
+                {
+                  title: "Brand Development",
+                  description: "Creating and enhancing brand identities through strategic positioning and consistent messaging."
+                },
+                {
+                  title: "Digital Marketing",
+                  description: "Implementing effective digital marketing strategies to increase online presence and engagement."
+                },
+                {
+                  title: "Content Strategy",
+                  description: "Developing compelling content strategies that tell authentic stories and engage audiences."
+                },
+                {
+                  title: "Crisis Management",
+                  description: "Providing expert guidance in handling communication crises and maintaining brand reputation."
+                }
+              ].map((expertise, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg hover:transform hover:scale-105 transition-transform duration-300"
+                >
+                  <h3 className="text-xl font-bold mb-3 text-yellow-500">{expertise.title}</h3>
+                  <p className="text-gray-300">{expertise.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Awards Section */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-8 text-yellow-500">Recognition & Awards</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+              {[
+                {
+                  title: "Best PR Consultant 2023",
+                  organization: "PR Excellence Awards"
+                },
+                {
+                  title: "Media Excellence Award 2022",
+                  organization: "Indian Media Awards"
+                }
+              ].map((award, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg"
+                >
+                  <h3 className="text-xl font-bold mb-2 text-yellow-500">{award.title}</h3>
+                  <p className="text-gray-300">{award.organization}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
