@@ -94,7 +94,7 @@ export default function AboutPage() {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://www.linkedin.com/in/sarveshmishra"
+                  href="https://www.linkedin.com/in/digitalsarveshmishra/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-yellow-500 hover:text-yellow-400 transition-colors"
@@ -102,7 +102,7 @@ export default function AboutPage() {
                   LinkedIn →
                 </a>
                 <a
-                  href="https://twitter.com/sarveshmishra"
+                  href="https://x.com/sarvesh03"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-yellow-500 hover:text-yellow-400 transition-colors"
