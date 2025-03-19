@@ -29,13 +29,26 @@ const blogPosts = [
     readTime: "12 min read",
     date: "March 6, 2024",
     youtubeUrl: "https://youtu.be/52YgALPo_SU?si=goFr-MOJRk-l05qx"
+  },
+  {
+    id: "sohit-yogi-yoga-qa",
+    title: "SOHIT YOGI: YOGA TRANSFORMATION Q&A",
+    excerpt: "Discover why yoga is considered the most effective exercise for holistic well-being. Learn how yoga aligns mind, body, and spirit to address lifestyle diseases and improve overall health.",
+    image: "/blog/yoga-thumb.jpg",
+    category: "Yoga",
+    readTime: "18 min read",
+    date: "March 15, 2024",
+    youtubeUrl: "https://youtu.be/j_XKJNmOqoU?si=rp8Owzvz1g0keL6V",
+    featured: true,
+    imageAlt: "Sohit Yogi explains the transformative power of yoga and its health benefits"
   }
 ];
 
 const categories = [
   "All",
   "Astrology",
-  "Journalism"
+  "Journalism",
+  "Yoga"
 ];
 
 export default function BlogPage() {
@@ -54,9 +67,9 @@ export default function BlogPage() {
         <meta property="og:title" content="Sarvesh Mishra's Blog | Expert Insights on PR, Media, and Astrology" />
         <meta property="og:description" content="Explore expert insights from Sarvesh Mishra on PR, media relations, astrology, and journalism. In-depth analysis and Q&A sessions with industry leaders." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sarveshmishra.com/blog" />
-        <meta property="og:image" content="https://sarveshmishra.com/blog-og.jpg" />
-        <link rel="canonical" href="https://sarveshmishra.com/blog" />
+        <meta property="og:url" content="https://thesarveshmishra.com/blog" />
+        <meta property="og:image" content="https://thesarveshmishra.com/blog-og.jpg" />
+        <link rel="canonical" href="https://thesarveshmishra.com/blog" />
         <meta name="author" content="Sarvesh Mishra" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
       </Head>
@@ -70,7 +83,7 @@ export default function BlogPage() {
             "@type": "Blog",
             "name": "Sarvesh Mishra's Blog",
             "description": "Expert insights on PR, media relations, astrology, and journalism",
-            "url": "https://sarveshmishra.com/blog",
+            "url": "https://thesarveshmishra.com/blog",
             "author": {
               "@type": "Person",
               "name": "Sarvesh Mishra"
@@ -80,14 +93,14 @@ export default function BlogPage() {
               "name": "Sarvesh Mishra Consulting",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://sarveshmishra.com/logo.png"
+                "url": "https://thesarveshmishra.com/logo.png"
               }
             },
             "blogPost": blogPosts.map(post => ({
               "@type": "BlogPosting",
               "headline": post.title,
               "description": post.excerpt,
-              "image": `https://sarveshmishra.com${post.image}`,
+              "image": `https://thesarveshmishra.com${post.image}`,
               "datePublished": post.date,
               "author": {
                 "@type": "Person",
@@ -98,7 +111,7 @@ export default function BlogPage() {
                 "name": "Sarvesh Mishra Consulting",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://sarveshmishra.com/logo.png"
+                  "url": "https://thesarveshmishra.com/logo.png"
                 }
               }
             }))

@@ -1,5 +1,5 @@
 export default async function sitemap() {
-  const baseUrl = 'https://sarveshmishra.com';
+  const baseUrl = 'https://thesarveshmishra.com';
 
   // Get all blog posts
   const blogPosts = [

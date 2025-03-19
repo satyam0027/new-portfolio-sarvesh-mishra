@@ -3,10 +3,6 @@
 import { useState, useContext, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ThemeContext } from './ThemeContext';
-import { Playfair_Display, Inter } from 'next/font/google';
-
-const playfair = Playfair_Display({ subsets: ['latin'] });
-const inter = Inter({ subsets: ['latin'] });
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +43,7 @@ const Header = () => {
         <nav className="container mx-auto flex flex-wrap justify-between items-center">
           <Link 
             href="/" 
-            className={`${playfair.className} text-2xl font-bold tracking-wide text-gray-800 hover:text-yellow-600 transition-colors duration-300`} 
+            className="sf-pro-bold text-2xl tracking-wide text-gray-800 hover:text-yellow-600 transition-colors duration-300" 
             onClick={closeMenu}
           >
             Sarvesh Mishra
@@ -71,7 +67,7 @@ const Header = () => {
           </button>
 
           <ul
-            className={`${inter.className} w-full md:w-auto md:flex items-center space-y-2 md:space-y-0 md:space-x-6 ${
+            className={`w-full md:w-auto md:flex items-center space-y-2 md:space-y-0 md:space-x-6 sf-pro-regular ${
               isMenuOpen ? 'block' : 'hidden'
             } mt-4 md:mt-0`}
           >

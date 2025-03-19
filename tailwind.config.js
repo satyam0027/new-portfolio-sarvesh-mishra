@@ -12,7 +12,8 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        sans: ['var(--font-outfit)'],
+        sans: ['SF Pro Display', 'system-ui', 'sans-serif'],
+        serif: ['SF Pro Display', 'Georgia', 'serif'],
       },
     },
   },

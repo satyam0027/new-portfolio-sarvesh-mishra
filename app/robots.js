@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://sarveshmishra.com/sitemap.xml',
+    sitemap: 'https://thesarveshmishra.com/sitemap.xml',
   };
 } 
