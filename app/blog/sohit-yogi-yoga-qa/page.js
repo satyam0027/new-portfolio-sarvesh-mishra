@@ -64,10 +64,7 @@ export default function SohitYogiYogaQAPage() {
           </ul>
         </div>
 
-        {/* Add this before the YouTube section */}
-        <div className="border-t border-gray-800">
-          <ShareButtons url={currentUrl} title={pageTitle} />
-        </div>
+       
 
         {/* Content Sections */}
         <div className="prose prose-invert max-w-none">
@@ -214,6 +211,11 @@ export default function SohitYogiYogaQAPage() {
               Nothing is more satisfying than knowing that my yoga practice is bringing real change in people's lives.
             </p>
           </section>
+        </div>
+
+         {/* Add this before the YouTube section */}
+         <div className="border-t border-gray-800">
+          <ShareButtons url={currentUrl} title={pageTitle} />
         </div>
 
         {/* YouTube Video Section */}
