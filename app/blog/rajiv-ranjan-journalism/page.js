@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ShareButtons } from "../../components/ShareButtons";
 
 // Helper function to get YouTube video ID from URL
 const getYouTubeVideoId = (url) => {
@@ -10,6 +13,13 @@ const getYouTubeVideoId = (url) => {
 };
 
 export default function RajivRanjanJournalismPage() {
+  const [currentUrl, setCurrentUrl] = useState("");
+  const pageTitle = "RAJIV RANJAN: JOURNALISM & REALITY Q&A";
+
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
+
   const youtubeUrl = "https://youtu.be/52YgALPo_SU?si=goFr-MOJRk-l05qx";
   const videoId = getYouTubeVideoId(youtubeUrl);
 
@@ -125,6 +135,11 @@ export default function RajivRanjanJournalismPage() {
               Journalism is not just a profession for him—it's his passion. Every day, he wakes up excited to explore new stories, meet new people, and bring their voices to the forefront. Unlike some who treat journalism as a routine job, he sees it as a responsibility to serve the truth.
             </p>
           </section>
+        </div>
+
+        {/* Add this before the YouTube section */}
+        <div className="border-t border-gray-800">
+          <ShareButtons url={currentUrl} title={pageTitle} />
         </div>
 
         {/* YouTube Video Section */}

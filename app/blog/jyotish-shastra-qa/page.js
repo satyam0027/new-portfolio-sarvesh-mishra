@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ShareButtons } from "../../components/ShareButtons";
 
 // Helper function to get YouTube video ID from URL
 const getYouTubeVideoId = (url) => {
@@ -10,6 +13,13 @@ const getYouTubeVideoId = (url) => {
 };
 
 export default function JyotishShastraQAPage() {
+  const [currentUrl, setCurrentUrl] = useState("");
+  const pageTitle = "JYOTISH SHASTRA (ASTROLOGY) Q&A";
+
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
+
   const youtubeUrl = "https://youtu.be/K8_1z7BwiJc?si=4ynyg3ZnCIKclJqv";
   const videoId = getYouTubeVideoId(youtubeUrl);
 
@@ -125,6 +135,11 @@ export default function JyotishShastraQAPage() {
               In the digital era, many astrologers have taken their practice online, but some choose to stay away from commercialization. Authentic astrologers believe that astrology should be practiced with sincerity and depth rather than being turned into a business. Unlike fake astrologers who quickly analyze multiple horoscopes in a short time, a true astrologer takes the time to carefully examine all aspects of a horoscope. A well-trained astrologer can deeply analyze only 3 to 4 horoscopes per day due to the complexity involved. Since each horoscope consists of multiple charts, analyzing them requires patience and expertise. Those who promise instant solutions and quick readings are often more focused on financial gain than on providing accurate insights.
             </p>
           </section>
+        </div>
+
+        {/* Add this before the YouTube section */}
+        <div className="border-t border-gray-800">
+          <ShareButtons url={currentUrl} title={pageTitle} />
         </div>
 
         {/* YouTube Video Section */}

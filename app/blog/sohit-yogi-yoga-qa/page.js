@@ -1,19 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import Script from 'next/script';
+import { ShareButtons } from "../../components/ShareButtons";
 
 // Helper function to get YouTube video ID from URL
-  const getYouTubeVideoId = (url) => {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+const getYouTubeVideoId = (url) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
   const match = url.match(regExp);
-    return (match && match[2].length === 11) ? match[2] : null;
-  };
-  
+  return (match && match[2].length === 11) ? match[2] : null;
+};
+
 export default function SohitYogiYogaQAPage() {
+  const [currentUrl, setCurrentUrl] = useState("");
+  const pageTitle = "SOHIT YOGI: YOGA TRANSFORMATION Q&A";
+
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
+
   const youtubeUrl = "https://youtu.be/j_XKJNmOqoU?si=rp8Owzvz1g0keL6V";
   const videoId = getYouTubeVideoId(youtubeUrl);
 
@@ -54,7 +62,12 @@ export default function SohitYogiYogaQAPage() {
               </li>
             ))}
           </ul>
-            </div>
+        </div>
+
+        {/* Add this before the YouTube section */}
+        <div className="border-t border-gray-800">
+          <ShareButtons url={currentUrl} title={pageTitle} />
+        </div>
 
         {/* Content Sections */}
         <div className="prose prose-invert max-w-none">
@@ -117,7 +130,7 @@ export default function SohitYogiYogaQAPage() {
               <li>
                 <strong className="text-yellow-500">Blood Pressure & Heart Health</strong> – I have helped people reduce their dependency on BP medications through yoga and lifestyle changes.
               </li>
-              </ul>
+            </ul>
             <p className="text-gray-300 leading-relaxed mt-4">
               Every day, I receive messages from people telling me how their years-old pains and health issues disappeared through my yoga routines. That is the biggest motivation for me.
             </p>
@@ -170,7 +183,7 @@ export default function SohitYogiYogaQAPage() {
               <li>
                 <strong className="text-yellow-500">Social Media & Online Classes:</strong> Many people, including me, have built successful online yoga programs through Instagram, YouTube, and Facebook.
               </li>
-              </ul>
+            </ul>
             <p className="text-gray-300 leading-relaxed mt-4">
               There is huge demand for trained yoga teachers in India and abroad.
             </p>
@@ -193,26 +206,26 @@ export default function SohitYogiYogaQAPage() {
               The proudest moments are when people tell me that my yoga guidance has changed their lives. For example:
             </p>
             <ul className="list-disc pl-6 text-gray-300 mt-4 space-y-2">
-                <li>A woman suffering from chronic knee pain for 10+ years avoided surgery after following my yoga techniques.</li>
-                <li>A man from Pakistan lost 20 kg weight and sent me an audio message thanking me.</li>
-                <li>Many people who had spinal issues and were advised surgery got completely cured through my methods.</li>
-              </ul>
+              <li>A woman suffering from chronic knee pain for 10+ years avoided surgery after following my yoga techniques.</li>
+              <li>A man from Pakistan lost 20 kg weight and sent me an audio message thanking me.</li>
+              <li>Many people who had spinal issues and were advised surgery got completely cured through my methods.</li>
+            </ul>
             <p className="text-gray-300 leading-relaxed mt-4">
               Nothing is more satisfying than knowing that my yoga practice is bringing real change in people's lives.
             </p>
           </section>
-            </div>
+        </div>
 
         {/* YouTube Video Section */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <h2 className="text-2xl font-bold text-yellow-500 mb-6">Watch the Video</h2>
           <div className="relative w-full aspect-video rounded-lg overflow-hidden">
             {videoId ? (
-                  <iframe 
-                    src={`https://www.youtube.com/embed/${videoId}`}
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}`}
                 title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
                 className="absolute top-0 left-0 w-full h-full"
               />
             ) : (
@@ -224,8 +237,8 @@ export default function SohitYogiYogaQAPage() {
           <div className="mt-4 text-center">
             <a
               href={youtubeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-yellow-500 hover:text-yellow-400 transition-colors"
             >
               <span>Watch on YouTube</span>
@@ -255,11 +268,11 @@ export default function SohitYogiYogaQAPage() {
             <div>
               <h3 className="text-xl font-bold text-yellow-500">Sarvesh Mishra</h3>
               <p className="text-gray-400">PR & Media Consultant</p>
-              </div>
             </div>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
+    </div>
   );
 }
 
