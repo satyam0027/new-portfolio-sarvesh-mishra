@@ -30,12 +30,14 @@ export default function SohitYogiYogaQAPage() {
             <span>•</span>
             <span>18 min read</span>
           </div>
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden mb-8">
+          <div className="relative aspect-[16/9] w-full rounded-lg overflow-hidden mb-8">
             <Image
               src="/blog/yoga-thumb.jpg"
               alt="Sohit Yogi explains the transformative power of yoga and its health benefits"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className="object-cover"
+              priority
             />
           </div>
         </header>

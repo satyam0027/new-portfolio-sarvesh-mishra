@@ -26,12 +26,14 @@ export default function RajivRanjanJournalismPage() {
             <span>•</span>
             <span>12 min read</span>
           </div>
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden mb-8">
+          <div className="relative aspect-[16/9] w-full rounded-lg overflow-hidden mb-8">
             <Image
-              src="/blog/rajiv-ranjan-journalism.jpg"
-              alt="Rajiv Ranjan Journalism"
+              src="/blog/journalism.jpg"
+              alt="Rajiv Ranjan Journalism Q&A"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className="object-cover"
+              priority
             />
           </div>
         </header>

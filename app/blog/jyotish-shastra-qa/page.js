@@ -26,12 +26,14 @@ export default function JyotishShastraQAPage() {
             <span>•</span>
             <span>15 min read</span>
           </div>
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden mb-8">
+          <div className="relative aspect-[16/9] w-full rounded-lg overflow-hidden mb-8">
             <Image
-              src="/blog/astrology.jpg"
-              alt="Jyotish Shastra Astrology"
+              src="/blog/jyotish-thumb.jpg"
+              alt="Jyotish Shastra Q&A Session"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className="object-cover"
+              priority
             />
           </div>
         </header>

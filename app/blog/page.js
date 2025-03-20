@@ -158,12 +158,14 @@ export default function BlogPage() {
                 key={post.id}
                 className="group bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300"
               >
-                <div className="relative h-48 w-full">
+                <div className="relative aspect-[16/9] w-full">
                   <Image
                     src={post.image}
-                    alt={post.title}
+                    alt={post.imageAlt || post.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:opacity-80 transition-opacity duration-300"
+                    priority
                   />
                 </div>
                 <div className="p-6">
